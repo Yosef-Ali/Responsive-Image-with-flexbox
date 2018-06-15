@@ -1,0 +1,36 @@
+/*https://www.taniarascia.com/how-to-build-a-responsive-image-gallery-with-flexbox/*/
+* {
+  box-sizing:border-box;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.responsive-image {
+  max-width:100%;
+}
+.cell img{
+  display: block;
+}
+
+.cell {
+  margin: 1rem;
+}
+@media screen and (min-width: 600px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .cell {
+    width: calc(50% -2rem);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .cell {
+    /* width: calc(100% / 3); */
+    /* width: calc(33.333% - 2rem); */
+  }
+}
